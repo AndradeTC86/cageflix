@@ -1,7 +1,7 @@
 @use 'variaveis';
 
 .hero {
-    padding: 5.6vw;    
+    padding: 2.8vw;    
     max-height: 74vh;
     background-image: url(../images/hero_desktop.png);
     text-align: center;
@@ -36,7 +36,7 @@
                 width: calc(50% - 12px);
 
                 img {
-                    max-height: 50px;
+                    max-height: 100px;
                 }
 
                 button {
@@ -48,7 +48,7 @@
                     background-color: #6421ff;
                     text-transform: uppercase;
                     border-radius: 4px;
-                    margin-top: 2vw;
+                    margin-top: 1vw;
                     margin-bottom: 8px;
                 }
             }
