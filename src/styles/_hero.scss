@@ -9,9 +9,10 @@
 
     @media (max-width: 768px) {
         background-image: url(../../dist/images/hero_mobile.png);
-        padding-top: 50vw;
+        padding-top: calc(50vw + 30px);
         background-size: contain;
-        background-repeat: no-repeat;            
+        background-repeat: no-repeat;
+        margin-top: -55px;        
     }    
 
     .button {
@@ -21,7 +22,7 @@
 
     &__content {
         max-width: 640px;
-        padding-right: 128px;
+        padding-right: 128px;        
 
         &__branding {
             max-width: 320px;
