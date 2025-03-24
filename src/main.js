@@ -1,7 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
     const buttons = document.querySelectorAll('[data-tab-button]')
-    const questions =document.querySelectorAll('[data-faq-question]')    
+    const questions =document.querySelectorAll('[data-faq-question]')
     
+    const heroSection = document.querySelector('.hero')
+    const heroHeight = heroSection.clientHeight
+
+    window.addEventListener('scroll', function() {
+        const scrollY = window.scrollY
+
+        if (scrollY < heroHeight) {
+            hideHeader()
+        } else {
+            showHeader()
+        }        
+    })
+    
+    // Programação das abas na seção de atrações
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', function(button){
             const targetTab = button.target.dataset.tabButton
@@ -13,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
+    // Programação dp accordion do FAQ
     for (let i = 0; i < questions.length; i++) {
         questions[i].addEventListener('click', toggleAnswer)
     }
@@ -38,4 +53,14 @@ function toggleAnswer(element) {
     const style = 'faq__questions__item--is-open'
     const question = element.target.parentNode
     question.classList.toggle(style)
+}
+
+function hideHeader() {
+    const header = document.querySelector('header')
+    header.classList.add('header--is-hidden')
+}
+
+function showHeader() {
+    const header = document.querySelector('header')
+    header.classList.remove('header--is-hidden')
 }
