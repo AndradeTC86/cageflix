@@ -3,9 +3,16 @@
 .hero {
     padding: 2.8vw;    
     max-height: 74vh;
-    background-image: url(../images/hero_desktop.png);
+    background-image: url(../../dist/images/hero_desktop.png);
     text-align: center;
     background-size: cover;
+
+    @media (max-width: 768px) {
+        background-image: url(../../dist/images/hero_mobile.png);
+        padding-top: 50vw;
+        background-size: contain;
+        background-repeat: no-repeat;            
+    }    
 
     .button {
         margin-top: 2vw;
@@ -19,6 +26,10 @@
         &__branding {
             max-width: 320px;
             margin: 0 auto;
+
+            @media (max-width: 768px) {
+                max-width: 180px;
+            }
         }
 
         .title--small {
@@ -37,8 +48,17 @@
             display: flex;
             justify-content: space-between;
 
+            @media (max-width: 768px) {
+                display: block;
+            }
+
             &__combo {
                 width: calc(50% - 12px);
+
+                @media (max-width: 768px) {
+                    width: 100%;
+                    margin-bottom: 24px;
+                }
 
                 img {
                     max-height: 100px;

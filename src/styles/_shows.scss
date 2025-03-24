@@ -5,10 +5,15 @@
     min-height: 50vw;
 
     &__list {
-        margin-top: 44px;
+        margin-top: 48px;
         display: none;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 24px;
+
+        @media(max-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+            margin-top: 80px;
+        }
 
         &--is--active {
             display: grid;
@@ -25,6 +30,11 @@
     &__tabs {
         display: flex;
         justify-content: center;
+        margin-top: 172px;
+
+        @media(max-width: 768px) {            
+            margin-top: 600px;
+        }
         
         &__button {            
             color: variaveis.$corTextoSecundario;
